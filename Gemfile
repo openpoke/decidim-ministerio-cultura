@@ -8,6 +8,8 @@ DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.31-stable" }.f
 
 gem "decidim", DECIDIM_VERSION
 
+gem "decidim-pokecode", github: "openpoke/decidim-module-pokecode", branch: "release/0.31-stable"
+
 gem "bootsnap", "~> 1.3"
 
 gem "puma", ">= 6.3.1"
