@@ -9,6 +9,7 @@ DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.31-stable" }.f
 gem "decidim", DECIDIM_VERSION
 
 gem "decidim-pokecode", github: "openpoke/decidim-module-pokecode", branch: "release/0.31-stable"
+gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome", branch: "release/0.31-stable"
 
 gem "bootsnap", "~> 1.3"
 
@@ -28,8 +29,4 @@ group :development do
   gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.1"
   gem "web-console", "~> 4.2"
-end
-
-group :production do
-  gem "aws-sdk-s3", require: false
 end
