@@ -215,6 +215,15 @@ GIT
       sidekiq
       sidekiq-cron
 
+GIT
+  remote: https://github.com/openpoke/decidim-module-term_customizer.git
+  revision: 51b372309f6da37981046c09b1e21f2cddf0ae64
+  branch: release/0.31-stable
+  specs:
+    decidim-term_customizer (0.31)
+      decidim-admin (~> 0.31.0)
+      decidim-core (~> 0.31.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -1026,6 +1035,7 @@ DEPENDENCIES
   decidim-decidim_awesome!
   decidim-dev!
   decidim-pokecode!
+  decidim-term_customizer!
   letter_opener_web (~> 2.0)
   listen (~> 3.1)
   net-imap (~> 0.5.0)
