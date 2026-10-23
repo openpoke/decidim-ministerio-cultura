@@ -30,4 +30,11 @@ group :development do
   gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.1"
   gem "web-console", "~> 4.2"
+
+  gem "capistrano", "~> 3.17"
+  gem "capistrano3-puma"
+  gem "capistrano-bundler"
+  gem "capistrano-rails"
+  gem "capistrano-rbenv"
+  gem "capistrano-sidekiq"
 end
