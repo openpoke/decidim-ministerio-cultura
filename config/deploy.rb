@@ -2,7 +2,7 @@
 lock "~> 3.20.1"
 
 set :application, "decidim-ministerio-cultura"
-set :repo_url, "git@github.com/openpoke/decidim-ministerio-cultura.git"
+set :repo_url, "https://github.com/openpoke/decidim-ministerio-cultura"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -39,15 +39,18 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
+Rake::Task['deploy:assets:backup_manifest'].clear_actions
+Rake::Task['deploy:assets:restore_manifest'].clear_actions
+
 namespace :deploy do
-  desc "Decidim shakapacker configuration"
-  task :decidim_shakapacker_install do
+  desc 'Decidim webpacker configuration'
+  task :decidim_webpacker_install do
     on roles(:all) do
       within release_path do
-        execute :npm, "ci"
+        execute :npm, 'ci'
       end
     end
   end
 
-  before "deploy:assets:precompile", "deploy:decidim_shakapacker_install"
+  before 'deploy:assets:precompile', 'deploy:decidim_webpacker_install'
 end

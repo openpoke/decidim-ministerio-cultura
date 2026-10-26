@@ -31,7 +31,7 @@ server "localhost", user: "usudesa", roles: %w{app db web}, primary: true
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
-
+set :rails_env, 'production'
 
 # Custom SSH Options
 # ==================
@@ -46,6 +46,9 @@ server "localhost", user: "usudesa", roles: %w{app db web}, primary: true
 #    forward_agent: false,
 #    auth_methods: %w(password)
 #  }
+
+set :sshkit_backend, SSHKit::Backend::Local
+
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
