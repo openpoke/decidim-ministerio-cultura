@@ -66,3 +66,5 @@ set :sshkit_backend, SSHKit::Backend::Local
 set :service_unit_user, :system
 set :puma_systemctl_user, :system
 set :sidekiq_service_unit_user, :system
+set :puma_user, ENV.fetch("PUMA_USER", "deploy")
+set :sidekiq_user, ENV.fetch("SIDEKIQ_USER", "deploy")
