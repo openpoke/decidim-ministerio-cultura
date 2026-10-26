@@ -39,6 +39,8 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
+set :service_unit_user, :system
+
 Rake::Task['deploy:assets:backup_manifest'].clear_actions
 Rake::Task['deploy:assets:restore_manifest'].clear_actions
 
