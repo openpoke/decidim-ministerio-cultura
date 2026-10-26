@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server "localhost", user: "usudesa", roles: %w{app db web}, primary: true
+server "localhost", user: "usudesa", roles: %w{app db web worker}, primary: true
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
@@ -62,3 +62,6 @@ set :sshkit_backend, SSHKit::Backend::Local
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+set :puma_systemctl_user, :system
+set :sidekiq_service_unit_user, :system
