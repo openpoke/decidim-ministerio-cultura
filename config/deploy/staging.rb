@@ -63,6 +63,9 @@ set :sshkit_backend, SSHKit::Backend::Local
 #     # password: "please use keys"
 #   }
 
+set :rbenv_type, :user
+set :rbenv_ruby, '3.3.11'
+
 set :service_unit_user, :system
 set :puma_systemctl_user, :system
 set :sidekiq_service_unit_user, :system
