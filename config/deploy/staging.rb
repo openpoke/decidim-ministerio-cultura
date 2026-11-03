@@ -65,6 +65,7 @@ set :sshkit_backend, SSHKit::Backend::Local
 
 set :rbenv_type, :user
 set :rbenv_ruby, '3.3.11'
+set :rbenv_map_bins, %w[rake gem bundle ruby rails]
 
 set :service_unit_user, :system
 set :puma_systemctl_user, :system
